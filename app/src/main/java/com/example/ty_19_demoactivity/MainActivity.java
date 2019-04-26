@@ -26,9 +26,23 @@ public class MainActivity extends AppCompatActivity {
         botonReset = findViewById(R.id.botonReset);
         textSaludo = findViewById(R.id.textSaludo);
 
+        botonSaludar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                saludar();
+            }
+        });
+
+        botonReset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                reset();
+            }
+        });
+
     }
 
-    public void saludar(View v){
+    private void saludar(){
         if(editNombre.getText().toString().isEmpty()){
             Toast.makeText(this, "Tiene que ingresar su nombre", Toast.LENGTH_SHORT).show();
             // Log.i("SALUDO", "saludar: ");
@@ -39,7 +53,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void reset(View v){
-
+    private void reset(){
+        textSaludo.setText("");
+        editNombre.setText("");
     }
+
 }

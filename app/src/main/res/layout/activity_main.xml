@@ -12,7 +12,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="36dp"
-        android:onClick="saludar"
         android:text="Saludar"
         app:layout_constraintEnd_toStartOf="@+id/botonReset"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
